@@ -1,0 +1,2543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekar Swiss - Luxury Offset Printers | Premium Wedding Cards | Swiss Quality</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            /* Luxury Color Palette */
+            --gold: #d4af37;
+            --gold-light: #f4e4a6;
+            --gold-dark: #b8941f;
+            --navy: #0a1931;
+            --navy-light: #1f3a6d;
+            --cream: #f8f5f0;
+            --ivory: #fffef9;
+            --charcoal: #2c3e50;
+            --silver: #e8e8e8;
+            --accent: #c41e3a;
+            
+            /* New Blue Floral Colors */
+            --blue-light: #4a90e2;
+            --blue-medium: #357abd;
+            --blue-dark: #1e5a96;
+            --floral-white: #fff9f0;
+            --floral-gold: #ffd700;
+            
+            /* Typography */
+            --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-accent: 'Dancing Script', cursive;
+            
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 3rem;
+            --space-xl: 5rem;
+            --space-xxl: 8rem;
+            
+            /* Effects */
+            --shadow-sm: 0 4px 6px rgba(10, 25, 49, 0.05);
+            --shadow-md: 0 10px 25px rgba(10, 25, 49, 0.1);
+            --shadow-lg: 0 20px 50px rgba(10, 25, 49, 0.15);
+            --shadow-xl: 0 30px 80px rgba(10, 25, 49, 0.2);
+            
+            --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            --border-radius: 12px;
+            --border-radius-lg: 24px;
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--charcoal);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ===== PRELOADER ===== */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .loader-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loader-circle:nth-child(2) {
+            border-top-color: var(--gold-light);
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== CUSTOM CURSOR ===== */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transition: transform 0.2s ease;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            transition: all 0.4s ease;
+            transform: translate(-50%, -50%);
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: linear-gradient(135deg, var(--navy) 0%, #051022 100%);
+            color: var(--silver);
+            padding: 0.8rem 0;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .top-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-info {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .top-bar-info div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .top-bar-info i {
+            color: var(--gold);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 254, 249, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all var(--transition-smooth);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+            padding: 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            transition: padding var(--transition-smooth);
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            animation: shine 3s infinite linear;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 0.8rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            transition: color var(--transition-smooth);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--accent) 100%);
+            transition: width var(--transition-smooth);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Header Actions */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .quote-btn {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .cart-btn {
+            position: relative;
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--accent);
+            color: white;
+            font-size: 0.7rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Admin Button */
+        .admin-btn {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .admin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(10, 25, 49, 0.3);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: 
+                /* Blue Floral Gradient Overlay */
+                linear-gradient(135deg, 
+                    rgba(74, 144, 226, 0.9) 0%,
+                    rgba(53, 122, 189, 0.85) 25%,
+                    rgba(30, 90, 150, 0.85) 50%,
+                    rgba(10, 25, 49, 0.9) 100%),
+                /* Blue Floral Pattern */
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1" /></radialGradient></defs><g opacity="0.15"><path d="M200,100 C250,80 300,100 320,150 C340,200 320,250 270,270 C220,290 160,270 140,220 C120,170 150,120 200,100 Z" fill="url(%23grad1)"/><path d="M100,250 C130,230 170,240 190,270 C210,300 190,330 160,340 C130,350 90,330 70,300 C50,270 70,240 100,250 Z" fill="url(%23grad1)"/><path d="M300,200 C330,180 370,190 380,220 C390,250 370,280 340,290 C310,300 270,280 250,250 C230,220 270,200 300,200 Z" fill="url(%23grad1)"/></g></svg>'),
+                /* Additional Floral Elements */
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g opacity="0.1"><path d="M100,50 C120,40 140,50 150,70 C160,90 150,110 130,120 C110,130 90,110 80,90 C70,70 80,60 100,50 Z" fill="%23ffffff"/><path d="M50,150 C70,140 90,150 100,170 C110,190 100,210 80,220 C60,230 40,210 30,190 C20,170 30,160 50,150 Z" fill="%23ffffff"/><path d="M150,100 C170,90 190,100 200,120 C210,140 200,160 180,170 C160,180 140,160 130,140 C120,120 130,110 150,100 Z" fill="%23ffffff"/></g></svg>');
+            background-size: 400% 400%, 300px 300px, 200px 200px;
+            background-position: 0% 50%, 30% 20%, 70% 80%;
+            animation: blueGradientShift 25s ease infinite, floralFloat 40s linear infinite;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                /* Gold shimmer effect */
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+                /* Dark overlay for text contrast */
+                linear-gradient(135deg, rgba(10, 25, 49, 0.6) 0%, rgba(10, 25, 49, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                /* Elegant floral border pattern */
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,20 Q60,15 70,20 Q80,25 80,35 Q80,45 70,50 Q60,55 50,50 Q40,45 40,35 Q40,25 50,20 Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M30,70 Q40,65 50,70 Q60,75 60,85 Q60,95 50,100 Q40,105 30,100 Q20,95 20,85 Q20,75 30,70 Z" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M70,40 Q80,35 90,40 Q100,45 100,55 Q100,65 90,70 Q80,75 70,70 Q60,65 60,55 Q60,45 70,40 Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+            background-size: 150px 150px, 100px 100px, 120px 120px;
+            background-position: 10% 10%, 90% 90%, 50% 50%;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+            animation: floralBorderMove 60s linear infinite;
+        }
+
+        @keyframes blueGradientShift {
+            0% { background-position: 0% 50%, 30% 20%, 70% 80%; }
+            25% { background-position: 50% 0%, 40% 30%, 60% 70%; }
+            50% { background-position: 100% 50%, 50% 40%, 50% 60%; }
+            75% { background-position: 50% 100%, 60% 30%, 40% 70%; }
+            100% { background-position: 0% 50%, 30% 20%, 70% 80%; }
+        }
+
+        @keyframes floralFloat {
+            0% { background-position: 400% 400%, 30% 20%, 70% 80%; }
+            100% { background-position: 0% 0%, 50% 40%, 50% 60%; }
+        }
+
+        @keyframes floralBorderMove {
+            0% { 
+                transform: translate(0, 0) rotate(0deg);
+                background-position: 10% 10%, 90% 90%, 50% 50%;
+            }
+            25% { 
+                transform: translate(5px, -5px) rotate(0.5deg);
+                background-position: 12% 12%, 88% 88%, 52% 48%;
+            }
+            50% { 
+                transform: translate(0, 0) rotate(0deg);
+                background-position: 10% 10%, 90% 90%, 50% 50%;
+            }
+            75% { 
+                transform: translate(-5px, 5px) rotate(-0.5deg);
+                background-position: 8% 8%, 92% 92%, 48% 52%;
+            }
+            100% { 
+                transform: translate(0, 0) rotate(0deg);
+                background-position: 10% 10%, 90% 90%, 50% 50%;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 25, 49, 0.3);
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-accent);
+            font-size: 2rem;
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.3s;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.6s;
+        }
+
+        .hero-title span {
+            color: var(--gold);
+            position: relative;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--floral-gold), var(--gold));
+            transform: scaleX(0);
+            animation: expand 1s ease forwards 1.2s;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--floral-white);
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 0.9s;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards 1.2s;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-body);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.7s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: white;
+            box-shadow: 0 5px 25px rgba(212, 175, 55, 0.4), 0 0 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(212, 175, 55, 0.6), 0 0 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.2);
+            box-shadow: 0 5px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes expand {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features {
+            padding: var(--space-xl) 0;
+            background: var(--ivory);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-accent);
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--charcoal);
+            opacity: 0.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: var(--space-lg);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all var(--transition-smooth);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--accent) 100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(196, 30, 58, 0.1) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        /* ===== CATEGORIES SECTION ===== */
+        .categories {
+            padding: var(--space-xl) 0;
+            background: var(--cream);
+            position: relative;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: var(--space-lg);
+        }
+
+        .category-card {
+            position: relative;
+            height: 300px;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10, 25, 49, 0.9));
+            padding: 2rem;
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all var(--transition-smooth);
+        }
+
+        .category-card:hover .category-image {
+            transform: scale(1.1);
+        }
+
+        .category-card:hover .category-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products {
+            padding: var(--space-xl) 0;
+            background: var(--ivory);
+        }
+
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .products-filter {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid var(--silver);
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--charcoal);
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            min-height: 400px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-smooth);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .product-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 2rem;
+        }
+
+        .product-code {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border-radius: var(--border-radius);
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .action-btn-primary {
+            background: var(--navy);
+            color: white;
+        }
+
+        .action-btn-primary:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        .action-btn-secondary {
+            background: transparent;
+            color: var(--navy);
+            border: 2px solid var(--silver);
+        }
+
+        .action-btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .action-btn-danger {
+            background: var(--accent);
+            color: white;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .action-btn-danger:hover {
+            background: #a0162f;
+            transform: translateY(-2px);
+        }
+
+        /* ===== ADMIN UPLOAD SECTION ===== */
+        .admin-section {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+            color: white;
+            display: none;
+        }
+
+        .admin-section.active {
+            display: block;
+        }
+
+        .admin-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius-lg);
+            padding: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .admin-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--gold-light);
+        }
+
+        .form-input {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            color: white;
+            font-family: var(--font-body);
+            transition: all var(--transition-smooth);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .image-preview {
+            width: 100%;
+            height: 200px;
+            border: 2px dashed rgba(212, 175, 55, 0.3);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .image-preview.empty {
+            flex-direction: column;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .admin-actions {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* ===== ORDER FORM ===== */
+        .order-form {
+            padding: var(--space-xl) 0;
+            background: linear-gradient(135deg, var(--navy) 0%, #051022 100%);
+            color: white;
+        }
+
+        .order-form-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius-lg);
+            padding: 4rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .form-header .section-title {
+            color: white;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .order-summary {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--gold);
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: var(--space-xl) 0;
+            background: var(--cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .business-hours {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .business-hours h3 {
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--silver);
+        }
+
+        .hour-item:last-child {
+            border-bottom: none;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--navy);
+            color: white;
+            padding: var(--space-xl) 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-link {
+            color: var(--silver);
+            text-decoration: none;
+            transition: color var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all var(--transition-smooth);
+        }
+
+        .social-link:hover {
+            background: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .newsletter {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gold);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background var(--transition-smooth);
+        }
+
+        .newsletter button:hover {
+            background: var(--gold-dark);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--silver);
+            font-size: 0.9rem;
+        }
+
+        /* ===== MODAL ===== */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 25, 49, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-smooth);
+            padding: 2rem;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(50px);
+            transition: transform var(--transition-smooth);
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: var(--navy);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 2;
+            transition: background var(--transition-smooth);
+        }
+
+        .modal-close:hover {
+            background: var(--accent);
+        }
+
+        .modal-body {
+            padding: 3rem;
+        }
+
+        /* ===== CART ===== */
+        .cart {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 450px;
+            height: 100%;
+            background: white;
+            z-index: 2000;
+            transition: right var(--transition-smooth);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cart.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--silver);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-title {
+            color: var(--navy);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cart-items {
+            padding: 2rem;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--silver);
+            align-items: center;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            color: var(--navy);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-price {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .cart-footer {
+            padding: 2rem;
+            border-top: 1px solid var(--silver);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 2rem;
+        }
+
+        .cart-total span:last-child {
+            color: var(--gold);
+        }
+
+        /* ===== NOTIFICATION ===== */
+        .notification {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            padding: 1rem 1.5rem;
+            background: var(--navy);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            z-index: 3000;
+            transform: translateX(150%);
+            transition: transform var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-left: 4px solid var(--gold);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            border-left-color: #10b981;
+        }
+
+        .notification.error {
+            border-left-color: var(--accent);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .form-grid, .admin-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .header-content {
+                padding: 1rem 0;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .products-header {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .products-filter {
+                justify-content: center;
+            }
+            
+            .admin-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-form-container, .admin-container {
+                padding: 2rem;
+            }
+        }
+
+        /* ===== UTILITIES ===== */
+        .text-gold {
+            color: var(--gold);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+        .mt-4 { margin-top: 4rem; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <div><i class="fas fa-phone"></i> +41 79 524 95 85</div>
+                <div><i class="fas fa-envelope"></i> info@sekarswiss.com</div>
+            </div>
+            <div>30 Years of Swiss Printing Excellence</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">SEKAR SWISS</div>
+                    <div class="logo-sub">Offset Printers</div>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#wedding" class="nav-link">Wedding Cards</a>
+                <a href="#order" class="nav-link">Order</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="admin-btn" id="adminBtn">
+                    <i class="fas fa-plus-circle"></i> Add New Card
+                </button>
+                <a href="#order" class="quote-btn">
+                    <i class="fas fa-gem"></i> Get Quote
+                </a>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle">Swiss Craftsmanship Since 1993</div>
+                <h1 class="hero-title">Premium <span>Printing</span> Solutions</h1>
+                <p class="hero-description">Experience the pinnacle of Swiss printing excellence. Crafting timeless wedding cards, puberty cards, laser cut invitations and gift bags for your most precious moments.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">Explore Collection</a>
+                    <a href="#order" class="btn btn-outline">Custom Design</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Upload Section (Hidden by default) -->
+    <section class="admin-section" id="adminSection">
+        <div class="container">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <div>
+                        <div class="section-subtitle">Admin Panel</div>
+                        <h2 class="section-title">Add New Product</h2>
+                    </div>
+                    <button class="btn btn-outline" id="closeAdminBtn">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+                <form id="adminUploadForm">
+                    <div class="admin-form">
+                        <div class="form-group">
+                            <label class="form-label">Product Name</label>
+                            <input type="text" class="form-input" id="productName" placeholder="Enter product name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Category</label>
+                            <select class="form-input" id="productCategory" required>
+                                <option value="">Select category</option>
+                                <option value="wedding">Wedding Cards</option>
+                                <option value="puberty">Puberty Cards</option>
+                                <option value="laser">Laser Cut Cards</option>
+                                <option value="gift">Gift Bags</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Product Code</label>
+                            <input type="text" class="form-input" id="productCode" placeholder="e.g., WC-001" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Price (CHF)</label>
+                            <input type="number" class="form-input" id="productPrice" min="0" step="0.01" placeholder="0.00" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-input" id="productDescription" rows="3" placeholder="Enter product description" required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Product Image</label>
+                            <div class="image-preview empty" id="imagePreview">
+                                <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <p>Click to upload image or drag & drop</p>
+                                <small>Recommended: 800x600px, JPG/PNG</small>
+                            </div>
+                            <input type="file" id="productImage" accept="image/*" style="display: none;" required>
+                        </div>
+                        <div class="admin-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-upload"></i> Upload Product
+                            </button>
+                            <button type="reset" class="btn btn-outline">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Why Choose Us</div>
+                <h2 class="section-title">Swiss Excellence</h2>
+                <p class="section-description">Combining traditional craftsmanship with modern technology for unparalleled quality.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-title">30 Years Experience</h3>
+                    <p>Three decades of Swiss precision and attention to detail in every print.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Materials</h3>
+                    <p>Only the finest papers, inks, and finishes for luxury results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">Fast Turnaround</h3>
+                    <p>Express printing services without compromising on quality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">Personal Service</h3>
+                    <p>Dedicated consultants for your custom printing needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Our Collection</div>
+                <h2 class="section-title">Premium Products</h2>
+                <p class="section-description">Explore our exquisite range of luxury printing solutions.</p>
+            </div>
+            <div class="categories-grid">
+                <!-- Wedding Cards -->
+                <div class="category-card" data-category="wedding">
+                    <img src="assets/wedding.avif" 
+                         alt="Wedding Invitation Cards" class="category-image">
+                    <div class="category-overlay">
+                        <div class="category-icon">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <h3 class="category-title">Wedding Cards</h3>
+                        <p>Luxury invitations for your special day</p>
+                    </div>
+                </div>
+                
+                <!-- Puberty Cards -->
+                <div class="category-card" data-category="puberty">
+                    <img src="assets/Puberty.jpg" 
+                         alt="Puberty Cards" class="category-image">
+                    <div class="category-overlay">
+                        <div class="category-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="category-title">Puberty Ceremony</h3>
+                        <p>Traditional puberty ceremony invitation cards</p>
+                    </div>
+                </div>
+
+                <!-- Laser Cut Cards -->
+                <div class="category-card" data-category="laser">
+                    <img src="assets/laser.webp" 
+                         alt="Laser Cut Cards" class="category-image">
+                    <div class="category-overlay">
+                        <div class="category-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="category-title">Laser Cut</h3>
+                        <p>Intricate laser cut invitation cards</p>
+                    </div>
+                </div>
+
+                <!-- Gift Bags -->
+                <div class="category-card" data-category="gift">
+                    <img src="assets/gift.webp" 
+                         alt="Gift Bags" class="category-image">
+                    <div class="category-overlay">
+                        <div class="category-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3 class="category-title">Gift Bags</h3>
+                        <p>Premium gift bags and packaging solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <div class="container">
+            <div class="products-header">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <p class="section-description" id="categoryDescription">All our premium products</p>
+                </div>
+                <div class="products-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="wedding">Wedding</button>
+                    <button class="filter-btn" data-filter="puberty">Puberty</button>
+                    <button class="filter-btn" data-filter="laser">Laser Cut</button>
+                    <button class="filter-btn" data-filter="gift">Gift</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-form" id="order">
+        <div class="container">
+            <div class="order-form-container">
+                <div class="form-header">
+                    <div class="section-subtitle">Custom Order</div>
+                    <h2 class="section-title">Request a Quote</h2>
+                    <p class="section-description">Fill out the form below for a personalized quote</p>
+                </div>
+                <form id="quoteForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-input" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="Your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" placeholder="Your phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Product Type</label>
+                            <select class="form-input" required>
+                                <option value="">Select product</option>
+                                <option value="wedding">Wedding Cards</option>
+                                <option value="puberty">Puberty Cards</option>
+                                <option value="laser">Laser Cut Cards</option>
+                                <option value="gift">Gift Bags</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Design Details</label>
+                            <textarea class="form-input" rows="4" placeholder="Describe your design requirements..." required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Upload Your Design Files</label>
+                            <div class="file-upload" id="orderFileUpload">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag & drop files or click to upload</p>
+                                <small>Max file size: 10MB</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-item">
+                            <span>Service Fee</span>
+                            <span>CHF 25.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Printing Cost</span>
+                            <span>CHF 150.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Total</span>
+                            <span>CHF 175.00</span>
+                        </div>
+                    </div>
+                    <div class="admin-actions">
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                        <button type="reset" class="btn btn-outline">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Get in Touch</div>
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Location</h3>
+                            <p>Sekar Swiss Offset Printers<br>Switzerland</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Number</h3>
+                            <p>+41 79 524 95 85</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p>info@sekarswiss.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="business-hours">
+                    <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                    <div class="hour-item">
+                        <span>Monday - Friday</span>
+                        <span>9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="hour-item">
+                        <span>Saturday</span>
+                        <span>10:00 AM - 4:00 PM</span>
+                    </div>
+                    <div class="hour-item">
+                        <span>Sunday</span>
+                        <span>Closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sekar Swiss</h3>
+                    <p>30 years of Swiss printing excellence. Creating timeless designs with precision and passion.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a>
+                        <a href="#products" class="footer-link"><i class="fas fa-chevron-right"></i> Products</a>
+                        <a href="#wedding" class="footer-link"><i class="fas fa-chevron-right"></i> Wedding Cards</a>
+                        <a href="#order" class="footer-link"><i class="fas fa-chevron-right"></i> Order Form</a>
+                        <a href="#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact Us</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <div class="newsletter">
+                        <p>Subscribe for updates and exclusive offers</p>
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Sekar Swiss Offset Printers. All rights reserved. | Crafted with <i class="fas fa-heart text-gold"></i> in Switzerland</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart -->
+    <div class="cart" id="cart">
+        <div class="cart-header">
+            <h3 class="cart-title"><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="modal-close" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+            <div class="text-center mt-4">
+                <i class="fas fa-shopping-bag" style="font-size: 3rem; color: var(--silver);"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">CHF 0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const follower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                follower.style.left = e.clientX + 'px';
+                follower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+
+        document.querySelectorAll('button, a, .category-card, .product-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                follower.style.transform = 'translate(-50%, -50%) scale(2)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                follower.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initial Products Data
+        let products = JSON.parse(localStorage.getItem('sekarProducts')) || [
+            // Wedding Cards
+            {
+                id: 1,
+                name: "Royal Gold Wedding Invitation",
+                category: "wedding",
+                code: "WC-001",
+                price: 85.00,
+                image: "assets/wedding.avif",
+                description: "Exquisite gold foil wedding card with premium finish"
+            },
+            {
+                id: 2,
+                name: "Classic White Wedding Card",
+                category: "wedding",
+                code: "WC-002",
+                price: 75.00,
+                image: "assets/wedding.avif",
+                description: "Elegant white wedding invitation with pearl finish"
+            },
+            
+            // Puberty Cards
+            {
+                id: 3,
+                name: "Traditional Puberty Invitation",
+                category: "puberty",
+                code: "PC-001",
+                price: 65.00,
+                image: "assets/Puberty.jpg",
+                description: "Traditional design for puberty ceremony"
+            },
+            
+            // Laser Cut Cards
+            {
+                id: 4,
+                name: "Laser Cut Floral Design",
+                category: "laser",
+                code: "LC-001",
+                price: 95.00,
+                image: "assets/laser.webp",
+                description: "Intricate laser cut floral patterns"
+            },
+            
+            // Gift Bags
+            {
+                id: 5,
+                name: "Luxury Gift Bag Collection",
+                category: "gift",
+                code: "GB-001",
+                price: 35.00,
+                image: "assets/gift.webp",
+                description: "Premium quality gift bags"
+            }
+        ];
+
+        // Save products to localStorage
+        function saveProducts() {
+            localStorage.setItem('sekarProducts', JSON.stringify(products));
+        }
+
+        // Category descriptions
+        const categoryDescriptions = {
+            all: "All our premium products",
+            wedding: "Elegant wedding invitation cards for your special day",
+            puberty: "Traditional puberty ceremony invitation cards",
+            laser: "Intricate laser cut invitation cards",
+            gift: "Premium gift bags and packaging solutions"
+        };
+
+        // Category images
+        const categoryImages = {
+            wedding: "assets/wedding.avif",
+            puberty: "assets/Puberty.jpg",
+            laser: "assets/laser.webp",
+            gift: "assets/gift.webp"
+        };
+
+        // Category icons
+        const categoryIcons = {
+            wedding: "fas fa-ring",
+            puberty: "fas fa-heart",
+            laser: "fas fa-cut",
+            gift: "fas fa-gift"
+        };
+
+        // Category titles
+        const categoryTitles = {
+            wedding: "Wedding Cards",
+            puberty: "Puberty Ceremony",
+            laser: "Laser Cut",
+            gift: "Gift Bags"
+        };
+
+        // Render Categories
+        function renderCategories() {
+            const categoriesGrid = document.querySelector('.categories-grid');
+            const categories = ['wedding', 'puberty', 'laser', 'gift'];
+            
+            categoriesGrid.innerHTML = categories.map(category => `
+                <div class="category-card" data-category="${category}">
+                    <img src="${categoryImages[category]}" 
+                         alt="${categoryTitles[category]}" class="category-image">
+                    <div class="category-overlay">
+                        <div class="category-icon">
+                            <i class="${categoryIcons[category]}"></i>
+                        </div>
+                        <h3 class="category-title">${categoryTitles[category]}</h3>
+                        <p>${categoryDescriptions[category]}</p>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Add event listeners to category cards
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const category = card.dataset.category;
+                    filterProducts(category);
+                });
+            });
+        }
+
+        // Render Products
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('productsGrid');
+            const description = document.getElementById('categoryDescription');
+            
+            // Update description
+            description.textContent = categoryDescriptions[filter] || categoryDescriptions.all;
+            
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(p => p.category === filter);
+            
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = `
+                    <div class="text-center" style="grid-column: 1/-1; padding: 4rem;">
+                        <i class="fas fa-box-open" style="font-size: 4rem; color: var(--silver); margin-bottom: 1rem;"></i>
+                        <h3 style="color: var(--charcoal);">No products found in this category</h3>
+                        <p style="color: var(--charcoal); opacity: 0.7;">Please select another category</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            grid.innerHTML = filteredProducts.map(product => `
+                <div class="product-card" data-category="${product.category}">
+                    <div class="product-badge">${product.category.toUpperCase()}</div>
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-content">
+                        <div class="product-code">${product.code}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="section-description">${product.description}</p>
+                        <div class="product-price">CHF ${product.price.toFixed(2)}</div>
+                        <div class="product-actions">
+                            <button class="action-btn action-btn-primary" onclick="addToCart(${product.id})">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="action-btn action-btn-secondary" onclick="showProductModal(${product.id})">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button class="action-btn action-btn-danger" onclick="deleteProduct(${product.id})">
+                                <i class="fas fa-trash"></i> Delete Product
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Delete Product Function
+        function deleteProduct(productId) {
+            if (confirm('Are you sure you want to delete this product? This action cannot be undone.')) {
+                // Remove product from array
+                products = products.filter(p => p.id !== productId);
+                
+                // Save to localStorage
+                saveProducts();
+                
+                // Re-render products
+                const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+                renderProducts(activeFilter);
+                renderCategories();
+                
+                showNotification('Product deleted successfully!', 'success');
+            }
+        }
+
+        // Filter Products
+        function filterProducts(category) {
+            // Update filter buttons
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            const correspondingBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+            if (correspondingBtn) {
+                correspondingBtn.classList.add('active');
+            }
+            
+            // Render products for this category
+            renderProducts(category);
+            
+            // Scroll to products section
+            const productsSection = document.querySelector('.products');
+            if (productsSection) {
+                window.scrollTo({
+                    top: productsSection.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProducts(btn.dataset.filter);
+            });
+        });
+
+        // Admin Upload Functionality
+        const adminSection = document.getElementById('adminSection');
+        const adminBtn = document.getElementById('adminBtn');
+        const closeAdminBtn = document.getElementById('closeAdminBtn');
+        const imagePreview = document.getElementById('imagePreview');
+        const productImageInput = document.getElementById('productImage');
+        const adminForm = document.getElementById('adminUploadForm');
+
+        // Toggle Admin Section
+        adminBtn.addEventListener('click', () => {
+            adminSection.classList.add('active');
+            window.scrollTo({
+                top: adminSection.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        });
+
+        closeAdminBtn.addEventListener('click', () => {
+            adminSection.classList.remove('active');
+        });
+
+        // Image Preview
+        imagePreview.addEventListener('click', () => {
+            productImageInput.click();
+        });
+
+        productImageInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                    imagePreview.classList.remove('empty');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Drag and drop for image
+        imagePreview.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            imagePreview.style.borderColor = 'var(--gold)';
+        });
+
+        imagePreview.addEventListener('dragleave', () => {
+            imagePreview.style.borderColor = 'rgba(212, 175, 55, 0.3)';
+        });
+
+        imagePreview.addEventListener('drop', (e) => {
+            e.preventDefault();
+            imagePreview.style.borderColor = 'rgba(212, 175, 55, 0.3)';
+            
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                productImageInput.files = e.dataTransfer.files;
+                
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+                    imagePreview.classList.remove('empty');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Admin Form Submission
+        adminForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('productName').value;
+            const category = document.getElementById('productCategory').value;
+            const code = document.getElementById('productCode').value;
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const description = document.getElementById('productDescription').value;
+            const imageFile = productImageInput.files[0];
+            
+            if (!imageFile) {
+                showNotification('Please select an image', 'error');
+                return;
+            }
+            
+            // Convert image to base64
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const newProduct = {
+                    id: Date.now(), // Unique ID based on timestamp
+                    name: name,
+                    category: category,
+                    code: code,
+                    price: price,
+                    image: e.target.result, // Base64 image
+                    description: description
+                };
+                
+                // Add to products array
+                products.push(newProduct);
+                
+                // Save to localStorage
+                saveProducts();
+                
+                // Update display
+                renderProducts('all'); // Show all products including new one
+                renderCategories();
+                
+                // Reset form
+                adminForm.reset();
+                imagePreview.innerHTML = `
+                    <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <p>Click to upload image or drag & drop</p>
+                    <small>Recommended: 800x600px, JPG/PNG</small>
+                `;
+                imagePreview.classList.add('empty');
+                
+                // Close admin section
+                adminSection.classList.remove('active');
+                
+                showNotification('Product added successfully!', 'success');
+            };
+            
+            reader.readAsDataURL(imageFile);
+        });
+
+        // Cart Functionality
+        let cart = JSON.parse(localStorage.getItem('sekarCart')) || [];
+        let cartCount = cart.length;
+        let cartTotal = cart.reduce((total, item) => total + item.price, 0);
+
+        function updateCart() {
+            document.getElementById('cartCount').textContent = cartCount;
+            document.getElementById('cartTotal').textContent = `CHF ${cartTotal.toFixed(2)}`;
+            
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = cart.length ? cart.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-title">${item.name}</h4>
+                        <p class="cart-item-price">CHF ${item.price.toFixed(2)}</p>
+                        <button class="action-btn" style="padding: 0.3rem 0.8rem; font-size: 0.8rem; background: var(--accent); color: white;" onclick="removeFromCart(${item.id})">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    </div>
+                </div>
+            `).join('') : `
+                <div class="text-center mt-4">
+                    <i class="fas fa-shopping-bag" style="font-size: 3rem; color: var(--silver);"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            `;
+            
+            // Save cart to localStorage
+            localStorage.setItem('sekarCart', JSON.stringify(cart));
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                cart.push(product);
+                cartCount++;
+                cartTotal += product.price;
+                updateCart();
+                showNotification('Product added to cart', 'success');
+            }
+        }
+
+        function removeFromCart(productId) {
+            const index = cart.findIndex(item => item.id === productId);
+            if (index !== -1) {
+                cartTotal -= cart[index].price;
+                cart.splice(index, 1);
+                cartCount--;
+                updateCart();
+                showNotification('Product removed from cart', 'success');
+            }
+        }
+
+        // Cart Toggle
+        document.getElementById('cartBtn').addEventListener('click', () => {
+            document.getElementById('cart').classList.add('active');
+        });
+
+        document.getElementById('closeCart').addEventListener('click', () => {
+            document.getElementById('cart').classList.remove('active');
+        });
+
+        // Notification System
+        function showNotification(message, type = 'info') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Order Form Submission
+        document.getElementById('quoteForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showNotification('Quote request submitted successfully!', 'success');
+            e.target.reset();
+        });
+
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Show product modal
+        function showProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <button class="modal-close" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="modal-body">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                            <div>
+                                <img src="${product.image}" alt="${product.name}" style="width: 100%; border-radius: var(--border-radius);">
+                            </div>
+                            <div>
+                                <div class="product-code">${product.code}</div>
+                                <h2 style="color: var(--navy); margin: 1rem 0;">${product.name}</h2>
+                                <p style="margin-bottom: 2rem;">${product.description}</p>
+                                <div style="font-size: 2rem; color: var(--gold); font-weight: 700; margin-bottom: 2rem;">
+                                    CHF ${product.price.toFixed(2)}
+                                </div>
+                                <button class="btn btn-primary" onclick="addToCart(${product.id}); this.parentElement.parentElement.parentElement.parentElement.remove()">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            setTimeout(() => modal.classList.add('active'), 10);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCategories();
+            renderProducts();
+            updateCart();
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

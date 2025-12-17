@@ -1,0 +1,28 @@
+{
+  "name": "sekar-swiss-backend",
+  "version": "1.0.0",
+  "description": "Sekar Swiss Printing - Premium Offset Printers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "mongoose": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "keywords": [
+    "printing",
+    "wedding-cards",
+    "business-cards",
+    "swiss"
+  ],
+  "author": "Sekar Swiss",
+  "license": "ISC"
+}
